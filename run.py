@@ -5,12 +5,12 @@ import time
 GPIO.setmode(GPIO.BCM)
 var = 1
 Relay = 4
-channel = 17
-GPIO.setup(channel, GPIO.IN)
+Sensor = 17
+GPIO.setup(Sensor, GPIO.IN)
 GPIO.setup(Relay, GPIO.OUT)
 GPIO.output(Relay, GPIO.HIGH)
 while var == 1:
-	if GPIO.input(channel):
+	if GPIO.input(Sensor):
  		print "PUMP ON"
 		GPIO.output(Relay, GPIO.LOW)
 	else:
